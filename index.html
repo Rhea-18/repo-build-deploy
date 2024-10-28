@@ -17,6 +17,7 @@
             color: white;
             padding: 15px 0;
             text-align: center;
+            border-radius: 8px;
         }
         section {
             margin: 20px 0;
@@ -40,6 +41,25 @@
             width: 150px; /* Adjust size as needed */
             height: 150px; /* Adjust size as needed */
         }
+        .cuisine-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cuisine {
+            flex-basis: 30%;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .korean {
+            background-color: #ffebcd; /* Light beige */
+        }
+        .japanese {
+            background-color: #e6e6fa; /* Lavender */
+        }
+        .indian {
+            background-color: #ffe4e1; /* Misty Rose */
+        }
     </style>
 </head>
 <body>
@@ -50,7 +70,7 @@
 
 <section>
     <h2>About Me</h2>
-    <img src="C:\Users\SHITAL\Desktop\Marvel" alt="Rhea" class="profile-image"> <!-- Replace with your image path -->
+    <img src="images/profile-image.jpg" alt="Rhea" class="profile-image"> <!-- Replace with your image filename -->
     <p>As a passionate traveler and dedicated K-pop dancer, I have cultivated a diverse set of experiences that reflect my enthusiasm for exploring new cultures and expressing myself through dance. My travels have taken me across various continents, allowing me to immerse myself in the rich traditions and vibrant lifestyles of different countries.</p>
 </section>
 
@@ -60,13 +80,41 @@
 </section>
 
 <section>
-    <h2>K-Pop Dance Enthusiasm</h2>
-    <p>As a K-pop dance enthusiast, I actively participate in workshops and performances that allow me to connect with fellow dancers and share our passion for this dynamic art form. My training has not only improved my technical skills but also deepened my understanding of the cultural significance behind K-pop.</p>
-</section>
-
-<section>
     <h2>Culinary Interests</h2>
-    <p>My culinary journey is equally enriching. I am a devoted fan of Japanese and South Korean vegetarian cuisine, relishing dishes such as <strong>kimchi</strong> and <strong>bibimbap</strong>. Additionally, as an Indian by birth, I hold a profound love for Indian cuisine, which serves as a comforting reminder of my roots.</p>
+    <div class="cuisine-section">
+        <div class="cuisine korean">
+            <h3>South Korean Cuisine</h3>
+            <p>I am a passionate lover of:</p>
+            <ul>
+                <li><strong>Kimchi</strong></li>
+                <li><strong>Bibimbap</strong></li>
+                <li><strong>Ramen</strong></li>
+                <li><strong>Vegan Gimbap</strong></li>
+            </ul>
+        </div>
+
+        <div class="cuisine japanese">
+            <h3>Japanese Cuisine</h3>
+            <p>I enjoy the delicate flavors of:</p>
+            <ul>
+                <li><strong>Sushi</strong></li>
+                <li><strong>Ramen</strong></li>
+                <li><strong>Tempura</strong></li>
+                <li><strong>Miso Soup</strong></li>
+            </ul>
+        </div>
+
+        <div class="cuisine indian">
+            <h3>Indian Cuisine</h3>
+            <p>I cherish traditional dishes such as:</p>
+            <ul>
+                <li><strong>Veg Biryani</strong></li>
+                <li><strong>Paneer Mushroom tikka masala</strong></li>
+                <li><strong>South Indian food</strong></li>
+                <li><strong>Samosa</strong></li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <footer>
@@ -75,5 +123,3 @@
 
 </body>
 </html>
-
-
