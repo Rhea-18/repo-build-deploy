@@ -4,9 +4,9 @@ files:
   - source: index.html
     destination: /usr/share/nginx/html/
   - source: appspec.yml
-    destination: /usr/share/nginx/html/
+    destination: /usr/share/nginx/html/  # This is typically not needed; appspec.yml is used by CodeDeploy
   - source: scripts/setup_nginx.sh
-    destination: /usr/share/nginx/html/scripts/setup_nginx.sh  # Place it in a scripts directory under html
+    destination: /usr/share/nginx/html/scripts/setup_nginx.sh  # Ensure this directory exists
 
 hooks:
   AfterInstall:
