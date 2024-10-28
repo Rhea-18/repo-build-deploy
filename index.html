@@ -11,6 +11,7 @@
             color: #333;
             margin: 0;
             padding: 20px;
+            transition: background-color 0.5s ease; /* Smooth background transition */
         }
         header {
             background: #007BFF;
@@ -18,6 +19,7 @@
             padding: 15px 0;
             text-align: center;
             border-radius: 8px;
+            animation: fadeIn 2s; /* Fade-in effect */
         }
         section {
             margin: 20px 0;
@@ -25,6 +27,10 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s; /* Scale effect on hover */
+        }
+        section:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
         }
         h2 {
             color: #007BFF;
@@ -60,6 +66,11 @@
         .indian {
             background-color: #ffe4e1; /* Misty Rose */
         }
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -88,7 +99,7 @@
             <ul>
                 <li><strong>Kimchi</strong></li>
                 <li><strong>Bibimbap</strong></li>
-                <li><strong>hellamyeon & ramyeon</strong></li>
+                <li><strong>Hellamyeon & Ramyeon</strong></li>
                 <li><strong>Vegan Gimbap</strong></li>
             </ul>
         </div>
@@ -109,17 +120,33 @@
             <p>I cherish traditional dishes such as:</p>
             <ul>
                 <li><strong>Veg Biryani</strong></li>
-                <li><strong>Paneer Mushroom tikka masala</strong></li>
-                <li><strong>South Indian food</strong></li>
+                <li><strong>Paneer Mushroom Tikka Masala</strong></li>
+                <li><strong>South Indian Food</strong></li>
                 <li><strong>Samosa</strong></li>
             </ul>
         </div>
     </div>
 </section>
 
+<!-- New Section for CodePipeline Success -->
+<section id="pipeline-status" style="display:none;">
+    <h2>Deployment Status</h2>
+    <p id="status-message" style="color: green; font-weight:bold;">CodePipeline Deployment Successful!</p>
+</section>
+
 <footer>
     <p>&copy; 2024 My Travel and Dance Journey | All Rights Reserved</p>
 </footer>
+
+<script>
+// Simulating CodePipeline success message display
+function showDeploymentStatus() {
+    document.getElementById('pipeline-status').style.display = 'block';
+}
+
+// Simulate a successful deployment after a delay
+setTimeout(showDeploymentStatus, 2000); // Show status after 2 seconds
+</script>
 
 </body>
 </html>
